@@ -4,9 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XCARS</title>
+    <link rel="stylesheet" href="Style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300&family=Poppins&display=swap" rel="stylesheet">
+    <!--swiper CDN-->
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+ />
+
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </head>
 <body>
@@ -20,7 +29,7 @@
             </svg>    
         </div>
         <div class="logo-out">
-            <svg class="logo" width="141" height="72" viewBox="0 0 141 72" fill="none" xmlns="http://www.w3.org/2000/svg"       xmlns:xlink="http://www.w3.org/1999/xlink">
+            <svg class="logo" width="141" height="72" viewBox="0 0 141 72" fill="none" xmlns="http://www.w3.org/2000/svg"         xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="Logo">
                 <rect id="kindpng_5034355 1" width="141" height="43" fill="url(#pattern0)"/>
                 <path id="XCARS" d="M40.6 64L45.4 56.86L40.8 50H43.04L46.5 55.2L49.98 50H52.22L47.6 56.86L52.42 64H50.18L46.5 58.5L42.84 64H40.6ZM62.7273 60.5H64.7273V62.76L62.4073 64.1H57.1473L54.8273 62.76V51.24L57.1473 49.9H62.4073L64.7273 51.24V53.5H62.7273V51.7H56.8273V62.3H62.7273V60.5ZM74.2081 50L79.2081 64H77.2481L76.0681 60.68H69.8681L68.6881 64H66.7281L71.7281 50H74.2081ZM72.9481 51.98L70.5081 58.88H75.4281L72.9881 51.98H72.9481ZM86.4294 58.42H83.4094V64H81.4094V50H88.5894L90.9094 51.34V57.08L88.5894 58.42L91.8094 64H89.5894L86.4294 58.42ZM83.4094 51.8V56.62H88.9094V51.8H83.4094ZM94.5148 56.6V51.24L96.8348 49.9H101.495L103.815 51.24V53.3H101.815V51.7H96.5148V55.94H101.495L103.815 57.28V62.76L101.495 64.1H96.6348L94.3148 62.76V60.7H96.3148V62.3H101.815V57.94H96.8348L94.5148 56.6Z" fill="white"/>
@@ -53,25 +62,70 @@
 
     <div class="section1">
         <p class="p1">Elevate your driving experience with our luxury car leasing options!</p>
-        <div class="cars-containers">
-            <ul class="cars-container">
-                <li><button>ADD TO CART</button></li>
-                <li><button>ADD TO CART</button></li>
-                <li><button>ADD TO CART</button></li>
-                <li><button>ADD TO CART</button></li>
+        <div class="swiper">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <div class="price">200.00DH</div>
+                    <img src="Media/car8.png" alt="">
+                    <button class="button"><t>ADD TO CART</t>
+                    </button>
+                </li>
+                <li class="swiper-slide">
+                    <div class="price">350.00DH</div>
+                    <img src="Media/car1.png" alt="">
+                    <button><t>ADD TO CART</t>
+                    </button>
+                </li>
+                <li class="swiper-slide">
+                    <div class="price">500.00DH</div>
+                    <img src="Media/car2.png" alt="">
+                    <button><t>ADD TO CART</t>
+                    </button>
+                </li>
+                <li class="swiper-slide">
+                    <div class="price">1,000.00DH</div>
+                    <img src="Media/car3.png" alt="">
+                    <button><t>ADD TO CART</t>
+                    </button>
+                </li>
+                <li class="swiper-slide">
+                    <div class="price">1,500.00DH</div>
+                    <img src="Media/car4.png" alt="">
+                    <button><t>ADD TO CART</t>
+                    </button>
+                </li>
+                <li class="swiper-slide">
+                    <div class="price">800.00DH</div>
+                    <img src="Media/car5.png" alt="">
+                    <button><t>ADD TO CART</t>
+                    </button>
+                </li>
+                <li class="swiper-slide">
+                    <div class="price">150.00DH</div>
+                    <img src="Media/car6.png" alt="">
+                    <button><t>ADD TO CART</t>
+                    </button>
+                </li>
+                <li class="swiper-slide">
+                    <div class="price">250.00DH</div>
+                    <img src="Media/car7.png" alt="">
+                    <button><t>ADD TO CART</t>
+                    </button>
+                </li>
             </ul>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
         </div>
         <p class="p2">Drive with distinction, drive with luxury, because you deserve the extraordinary. Explore our leasing options today and redefine your journey on the road!</p>
     </div>
 
 
 
-
-
-
-
-
-    
-    <link rel="stylesheet" href="Style.css">
+    <script src="js.js"></script>
 </body>
 </html>
