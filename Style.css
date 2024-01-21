@@ -4,6 +4,7 @@ body, html{
     padding: 0;
     overflow-x: hidden;
     color: white;
+    transition: 1s;
 }
 
 /*==== header ====*/
@@ -40,7 +41,10 @@ body, html{
 }
 .logo{
     position: absolute;
-    background: transparent;
+    background: url(Media/Logo.png);
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 90px;
     left: 5%;
     top: 3%;
 }
@@ -53,17 +57,8 @@ h1{
     line-height: normal;
     position: absolute;
     top: 30%;
-    left: 5%;
     z-index: 1;
-    animation: movetilte 1s ease-in-out;
-}
-@keyframes movetilte{
-    from{
-        transform: translateX(0%);
-    }
-    to{
-        transform: translateX(100%);
-    }
+    opacity: 0;
 }
 h2{
     color: white;
@@ -77,6 +72,7 @@ h2{
     left: 10%;
     width: 40%;
     z-index: 1;
+    opacity: 0;
 }
 video{
     width: 100%;
@@ -89,7 +85,7 @@ video{
 
 .bar ul li {
     list-style: none;
-    color: white;
+    color: rgba(255, 255, 255, 0.50);
     display: inline-block;
     margin: 0px 20px;
     cursor: pointer;
@@ -233,4 +229,106 @@ button div{
     40%{
         transform: scale(1);
     }
+}
+/*====Ending====*/
+.ending{
+    width: 100%;
+    height: 20%;
+    flex-shrink: 0;
+    border-top: 1px solid #FFF;
+    background: #000;
+    position: relative;
+}
+.p3{
+    color: rgba(255, 255, 255, 0.50);
+    font-size: 15px;
+    width: 95%;
+    position: relative;
+    left: 5%;
+}
+
+/*==== loading======*/
+
+.loader-container{
+    position: fixed;
+    inset: 0;
+    background: black;
+    display: grid;
+    place-content: center;
+    z-index: 99;
+}
+#loader{
+    width: 500px;
+    height: 500px;
+    background: transparent;
+}
+#logo-loading{
+    fill: white;
+    stroke: transparent;
+    font-size: 160px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: -20px;
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 25% 0;
+    font-weight: bolder;
+    animation: loading2 2.5s ease-in-out;
+}
+@keyframes loading2 {
+    0%{
+        fill: transparent;
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 25%;
+        stroke-width: 1;
+        font-size: 150px;
+
+    
+    }
+    50%{
+        fill: transparent;
+        stroke-width: 1;
+        stroke: white;
+
+    }
+    80%,
+    100%{
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 25% 0;
+        fill: white;
+        stroke-width: 0;
+        opacity: 1;
+        font-size: 160px;
+        
+    }
+}
+.Icons{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    right: 5%;
+    bottom: 0px;
+
+}
+.icon{
+    margin: 0px 10px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.50);
+    transition: 0.5s;
+}
+.icon:hover{
+    color:#FFC938;
+}
+
+/*====Arrows ====*/
+
+.swiper-button-next{
+    transition: 0.25s;
+}
+.swiper-button-next:hover{
+    color:#FFC938;
+}
+.swiper-button-prev{
+    transition: 0.25s;
+}
+.swiper-button-prev:hover{
+    color:#FFC938;
 }

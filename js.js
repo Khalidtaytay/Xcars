@@ -26,3 +26,38 @@ const swiper = new Swiper('.swiper', {
     };
     
   });
+  gsap.set('#h1', {
+    opacity: 0,
+    translateX: '0%',
+  });
+  gsap.to('#h1', {
+    delay:5,
+    duration: 2.5,
+    translateX: '100',
+    opacity: 1,  
+    ease: "elastic.out(1,0.3)",
+  });
+  gsap.set('#h2', {
+    opacity: 0,
+    translateX: '0%',
+  });
+  gsap.to('#h2', {
+    delay:6.5,
+    duration: 5,
+    translateX: '50',
+    opacity: 1,  
+  });
+
+
+  let loaderContainer = document.querySelector('.loader-container');
+  let body = document.querySelector('body');
+  function loading(){
+    setTimeout(removeLoading,4000)
+  }
+  function removeLoading() {
+    loaderContainer.style.visibility= 'hidden'
+
+    
+
+  }
+  loading()
