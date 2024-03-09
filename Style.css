@@ -399,13 +399,17 @@ button div{
         font-size: 10px;
         margin: 5px;
     }
+    .header{
+        height: 50px;
+        position: relative;
+    }
     .bar ul {
         width: 100%;
         display: flex;
         justify-content: center;
+        position: absolute;
+        bottom: -15px;
     }
-    .header{
-        height: 7%;
-    }
+
 
 }
