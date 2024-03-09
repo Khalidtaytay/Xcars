@@ -1,7 +1,13 @@
-body, html{
+*{
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+}
+body{
     background: black;
     margin: 0;
-    padding: 0;
     overflow-x: hidden;
     color: white;
     transition: 1s;
@@ -10,48 +16,52 @@ body, html{
 /*==== header ====*/
 .header{
     background: black;
+    position: relative;
     height: 100px;
     width: 100%;
     position: fixed;
     z-index: 5;
     border-bottom: 1px solid white;
+    display: flex;
+    flex-direction: column;
 
+}
+.header-bar{
+    width: 70%;
+    height: 50%;
 }
 .bar{
-    display: flex;
-    background: transparent;
-    justify-content: center;
-    background: transparent;
-    position: relative;
-    top: -79px;
-    z-index: 1;
-
-}
-.frameOut{
-    position: relative;
-    background: #D9D9D9;
-    width: 60%;
-    height: 126.4px;
-    left: 40%;
-    top: -80px;
-}
-.frameIn{
-    position: relative;
-    left: -70px;
-}
-.logo{
+    width: 100%;
     position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
     background: url(Media/Logo.png);
     background-repeat: no-repeat;
+    background-size: 100%;
     width: 150px;
     height: 90px;
-    left: 5%;
-    top: 3%;
+    position: relative;
+    left: 2%;
 }
-h1{
+.logo-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+/*video-container*/
+.video-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+#h1{
     color: white;
     font-family: 'Poppins', sans-serif;
-    font-size: 70px;
+    font-size: 50px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -60,10 +70,11 @@ h1{
     z-index: 1;
     opacity: 0;
 }
-h2{
+#h2{
     color: white;
     font-family: 'Poppins', sans-serif;
-    font-size: 50px;
+    font-size: 30px;
+    min-width: 50%;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -99,16 +110,14 @@ video{
 
 .section1{
     width: 100%;
-    height: 732px;
+    padding-inline: 2%;
+    height: auto;
     background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.5)),
     url(Media/alex_rainer-bjjuwMXgwys-unsplash.jpg) center/cover no-repeat;
-    position: relative;
-
     background-size: 100%;
     background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -119,36 +128,21 @@ p{
   width: 100%;
   left: 5%;
 }
-.p1{
-    position:absolute;
-    top: 0;
-}
-.p2{
-    position: absolute;
-    bottom: 100px;
-    z-index: 1;
-}
+
 .swiper{
     width: 100%;
-    height: 500px;
-    background: transparent;
+    height: 300px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
 }
 .swiper-wrapper{
-    position: absolute;
-    width: 100%;
-    height: 60%;
     display: flex;
     align-items: center;
-    background: transparent;
-    margin: 0;
-    padding: 0;
-    
 }
 .swiper-wrapper li{
     display: flex;
-    height: 300px;
+    height: 80%;
     width: 100px;
     margin: 20px;
     flex-direction: column;
@@ -165,7 +159,7 @@ p{
 }
 button{
     display: flex;
-    width: 225px;
+    width: 80%;
     height: 50px;
     padding: 6px 23px;
     justify-content: center;
@@ -173,7 +167,7 @@ button{
     border-radius: 50px;
     background: #060606;
     color: white;
-    font-size: 20px;
+    font-size: 100%;
     margin: 10px;
     font-style: normal;
     line-height: normal;
@@ -193,6 +187,7 @@ button:hover{
     position: absolute;
     top: 30%;
 }
+
 .swiper-slide img{
     width: 100%;
     height: 50%;
@@ -220,8 +215,6 @@ button div{
 .point2{
     animation-delay:-0.15s;
 }
-.point3{
-}
 @keyframes loading{
     0%, 80%, 100% {
         transform: scale(0);
@@ -238,13 +231,11 @@ button div{
     border-top: 1px solid #FFF;
     background: #000;
     position: relative;
+    padding-inline: 2%;
 }
 .p3{
     color: rgba(255, 255, 255, 0.50);
     font-size: 15px;
-    width: 95%;
-    position: relative;
-    left: 5%;
 }
 
 /*==== loading======*/
@@ -305,17 +296,17 @@ button div{
     flex-wrap: wrap;
     position: absolute;
     right: 5%;
-    bottom: 0px;
+    bottom: 0;
 
 }
 .icon{
     margin: 0px 10px;
     cursor: pointer;
     color: rgba(255, 255, 255, 0.50);
-    transition: 0.5s;
+    transition: 0.25s;
 }
 .icon:hover{
-    color:#FFC938;
+    color:white;
 }
 
 /*====Arrows ====*/
@@ -331,4 +322,83 @@ button div{
 }
 .swiper-button-prev:hover{
     color:#FFC938;
+}
+
+@media(max-width:1218px){
+    #h1{
+        font-size: 40px;
+        top: 20%;
+    }
+    #h2{
+        font-size: 20px;
+        min-width: 80%;
+        top: 30%;
+    }
+}
+@media(max-width:700px){
+    #logo-loading{
+        font-size: 100px;
+        letter-spacing: -10px;
+        stroke-dashoffset: 15%;
+        stroke-dasharray: 15% 0;
+        font-weight: bold;
+        animation: loading3 2.5s ease-in-out;
+    }
+    @keyframes loading3 {
+        0%{
+            fill: transparent;
+            stroke-dashoffset: 15%;
+            stroke-dasharray: 0 15%;
+            stroke-width: 1;
+            font-size: 100px;
+    
+        
+        }
+        50%{
+            fill: transparent;
+            stroke-width: 1;
+            stroke: white;
+    
+        }
+        80%,
+        100%{
+            stroke-dashoffset: 15%;
+            stroke-dasharray: 15% 0;
+            fill: white;
+            stroke-width: 0;
+            opacity: 1;
+            font-size: 100px;
+            
+        }
+    }
+    #h1{
+    position: absolute;
+    top: 15%;
+    font-size: 20px;
+
+    }
+    #h2{
+        position: absolute;
+        top: 20%;
+        font-size: 16px;
+    }
+    p{
+        font-size: 100%;
+    }
+    .header-bar{
+        width: 70%;
+        height: 30%;
+    }
+    .logo{
+        width: 20%;
+    }
+    .bar{
+        font-size: small;
+    }
+    .bar ul {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
 }
