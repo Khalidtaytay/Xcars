@@ -395,13 +395,18 @@ button div{
     .logo{
         width: 20%;
     }
-    .bar{
-        font-size: small;
+    .bar ul li{
+        font-size: 10px;
+        margin: 5px;
+        background: red;
     }
     .bar ul {
         width: 100%;
         display: flex;
         justify-content: center;
+    }
+    .header{
+        height: 7%;
     }
 
 }
